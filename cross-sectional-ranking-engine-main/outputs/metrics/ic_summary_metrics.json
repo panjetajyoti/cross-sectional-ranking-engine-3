@@ -1,0 +1,9 @@
+{
+    "mean_rank_ic": 0.0446,
+    "std_rank_ic": 0.2306,
+    "ic_ir": 0.1936,
+    "t_stat": 6.02,
+    "p_value": 0.0,
+    "hit_rate_pct": 57.7,
+    "total_periods": 967
+}

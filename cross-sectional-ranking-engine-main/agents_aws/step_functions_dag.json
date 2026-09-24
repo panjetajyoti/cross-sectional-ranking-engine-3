@@ -1,0 +1,56 @@
+{
+  "Comment": "Autonomous AWS Step Functions Workflow for Cross-Sectional Ranking Engine",
+  "StartAt": "ComplianceScanRawData",
+  "States": {
+    "ComplianceScanRawData": {
+      "Type": "Task",
+      "Resource": "arn:aws:lambda:ap-south-1:123456789012:function:ComplianceGuardrailScan",
+      "Next": "GluePITFeatureIngestion"
+    },
+    "GluePITFeatureIngestion": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::glue:startJobRun.sync",
+      "Parameters": {
+        "JobName": "glue_pit_feature_job"
+      },
+      "Next": "SageMakerTrainLambdaMART"
+    },
+    "SageMakerTrainLambdaMART": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::sagemaker:createTrainingJob.sync",
+      "Parameters": {
+        "TrainingJobName.$": "$.JobId",
+        "AlgorithmSpecification": {
+          "TrainingImage": "123456789012.dkr.ecr.ap-south-1.amazonaws.com/lightgbm-ranker:latest",
+          "TrainingInputMode": "File"
+        }
+      },
+      "Next": "EvaluateICAnalytics"
+    },
+    "EvaluateICAnalytics": {
+      "Type": "Task",
+      "Resource": "arn:aws:lambda:ap-south-1:123456789012:function:EvaluateIC",
+      "Next": "CheckICThreshold"
+    },
+    "CheckICThreshold": {
+      "Type": "Choice",
+      "Choices": [
+        {
+          "Variable": "$.MeanRankIC",
+          "NumericGreaterThanEquals": 0.03,
+          "Next": "GenerateAuditReport"
+        }
+      ],
+      "Default": "PipelineFailedLowAlpha"
+    },
+    "GenerateAuditReport": {
+      "Type": "Task",
+      "Resource": "arn:aws:lambda:ap-south-1:123456789012:function:GenerateModelCardAndHash",
+      "End": true
+    },
+    "PipelineFailedLowAlpha": {
+      "Type": "Fail",
+      "Cause": "Mean Rank IC fell below minimum institutional threshold of 0.03."
+    }
+  }
+}

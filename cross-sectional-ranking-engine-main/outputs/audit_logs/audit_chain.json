@@ -1,0 +1,48 @@
+[
+    {
+        "index": 1,
+        "timestamp": "2026-09-16T11:18:44.504162Z",
+        "action": "COMPLIANCE_VERIFIED",
+        "artifact_path": "data/curated_pit/labeled_dataset.parquet",
+        "artifact_sha256": "bd7fc17b26f5c3e8df43133582c58e1167f63a914254103f639fcb8db49dfe52",
+        "metadata": {
+            "rows": 30120
+        },
+        "previous_hash": "GENESIS_BLOCK_00000000000000000000000000000000000000000000000000000000",
+        "block_hash": "22799ccd07198028959fc7fe03bf8f44a8ae6881f1b76e2a2dc7c9ceca876b20"
+    },
+    {
+        "index": 2,
+        "timestamp": "2026-09-16T11:18:44.609896Z",
+        "action": "MODEL_REGISTRATION",
+        "artifact_path": "outputs/model_cards/lambdamart_engine.joblib",
+        "artifact_sha256": "064e11462fca65a8b797994575037c5430ce7776625f22169adb432e57a879c5",
+        "metadata": {
+            "framework": "LightGBM LambdaMART"
+        },
+        "previous_hash": "22799ccd07198028959fc7fe03bf8f44a8ae6881f1b76e2a2dc7c9ceca876b20",
+        "block_hash": "b261d5b6a00475d63799f888071829e1bce08e94e9dbf4cc5857f814db7994b6"
+    },
+    {
+        "index": 3,
+        "timestamp": "2026-09-16T11:18:44.624895Z",
+        "action": "SHORTLIST_GENERATION",
+        "artifact_path": "outputs/shortlists/final_scored_shortlist.csv",
+        "artifact_sha256": "04bc0a8a57a0b4438f411140d280a7d5107a56347b17b48978f92cbd2d77d1da",
+        "metadata": {
+            "format": "CSV"
+        },
+        "previous_hash": "b261d5b6a00475d63799f888071829e1bce08e94e9dbf4cc5857f814db7994b6",
+        "block_hash": "446697f9a37ed1cf6ba49b1322ade09a31552d574bda50394fafb3e6702552fc"
+    },
+    {
+        "index": 4,
+        "timestamp": "2026-09-16T11:18:44.694006Z",
+        "action": "MODEL_CARD_EXPORT",
+        "artifact_path": "outputs/model_cards/MODEL_CARD_PRODUCTION.md",
+        "artifact_sha256": "101ead80444e4c397a5413575e958faee714b7039c720b93290eb336ed67928c",
+        "metadata": {},
+        "previous_hash": "446697f9a37ed1cf6ba49b1322ade09a31552d574bda50394fafb3e6702552fc",
+        "block_hash": "8929a1fe3e521b921d0f395e1a351629777cca52873541d9867fda7386e4496e"
+    }
+]

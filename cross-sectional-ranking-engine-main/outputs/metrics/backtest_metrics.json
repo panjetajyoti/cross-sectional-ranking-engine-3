@@ -1,0 +1,9 @@
+{
+    "d10_ann_return_pct": 25.03,
+    "d10_sharpe_ratio": 1.42,
+    "d10_max_drawdown_pct": -10.85,
+    "d10_d1_spread_ann_pct": 12.04,
+    "spread_sharpe_ratio": 0.65,
+    "decile_monotonicity": -0.019,
+    "avg_rebalance_turnover_pct": 55.8
+}

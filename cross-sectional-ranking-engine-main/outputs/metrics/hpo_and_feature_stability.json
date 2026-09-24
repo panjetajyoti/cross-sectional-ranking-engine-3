@@ -1,0 +1,66 @@
+{
+    "best_rank_ic": 0.0546,
+    "best_params": {
+        "learning_rate": 0.027875610911567587,
+        "num_leaves": 22,
+        "min_child_samples": 26,
+        "subsample": 0.7535792145916994,
+        "colsample_bytree": 0.7408033196207067
+    },
+    "feature_stability": [
+        {
+            "feature": "mom_1m_neut",
+            "mean": 1489.4463806152344,
+            "std": 181.1072772376355,
+            "stability_score": 8.224111118609455
+        },
+        {
+            "feature": "mom_6m_neut",
+            "mean": 2476.470602631569,
+            "std": 294.3334105947791,
+            "stability_score": 8.413827669829846
+        },
+        {
+            "feature": "vol_60d_neut",
+            "mean": 2739.9789088368416,
+            "std": 301.43682434270903,
+            "stability_score": 9.089728521794607
+        },
+        {
+            "feature": "mom_12m_1m_neut",
+            "mean": 2830.371078848839,
+            "std": 429.23238254135293,
+            "stability_score": 6.594029685032272
+        },
+        {
+            "feature": "earnings_yield_neut",
+            "mean": 3050.325352549553,
+            "std": 210.02515065671875,
+            "stability_score": 14.523619330770627
+        },
+        {
+            "feature": "downside_vol_neut",
+            "mean": 3355.369192123413,
+            "std": 127.85008989858976,
+            "stability_score": 26.244558518029372
+        },
+        {
+            "feature": "debt_to_equity_neut",
+            "mean": 3833.018014192581,
+            "std": 651.6117927644748,
+            "stability_score": 5.882364393757468
+        },
+        {
+            "feature": "roe_neut",
+            "mean": 3935.6290026307106,
+            "std": 579.4847690429682,
+            "stability_score": 6.791600411411827
+        },
+        {
+            "feature": "accruals_neut",
+            "mean": 4125.608820974827,
+            "std": 1103.0189571514452,
+            "stability_score": 3.7402882248632916
+        }
+    ]
+}

@@ -1,0 +1,7 @@
+{
+    "standalone_lgb_ic": 0.0125,
+    "standalone_xgb_ic": 0.0043,
+    "standalone_ridge_ic": -0.0062,
+    "ensemble_rank_avg_ic": 0.0076,
+    "ensemble_lift_pct": -39.1
+}

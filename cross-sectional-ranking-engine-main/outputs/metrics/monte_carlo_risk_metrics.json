@@ -1,0 +1,20 @@
+{
+    "top_holdings": [
+        "NTPC",
+        "ASIANPAINT",
+        "ICICIBANK",
+        "ITC",
+        "MARUTI",
+        "INFY",
+        "BAJFINANCE",
+        "HCLTECH",
+        "M&M",
+        "LT"
+    ],
+    "n_simulations": 1000,
+    "horizon_days": 21,
+    "median_return_pct": 1.74,
+    "var_95_pct": -4.75,
+    "cvar_95_pct": -6.43,
+    "prob_positive_return_pct": 64.7
+}

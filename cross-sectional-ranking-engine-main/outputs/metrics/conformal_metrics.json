@@ -1,0 +1,19 @@
+{
+    "target_coverage": 0.9,
+    "realized_coverage": 0.9985,
+    "avg_daily_selected_names": 23.81,
+    "sector_thresholds": {
+        "Auto": 0.5352,
+        "Consumer": 0.5308,
+        "Energy": 0.5158,
+        "FMCG": 0.5287,
+        "Financials": 0.5264,
+        "Healthcare": 0.5158,
+        "IT": 0.5177,
+        "Industrials": 0.5158,
+        "Materials": 0.525,
+        "Telecom": 0.5158,
+        "Utilities": 0.5238,
+        "default": 0.5228
+    }
+}
